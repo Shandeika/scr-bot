@@ -36,7 +36,7 @@ async def rm_custom_char(ctx, char):
         else:
             name_raw = member.display_name  
             name_raw = name_raw.replace(char, "")
-            await member.edit(nick=name_raw, reason='Убраны спецсимволы')
+            await member.edit(nick=name_raw, reason=f'Убран спецсимвол "{char}"')
 
 #@bot.event
 async def on_command_error(ctx, exception): # для команд
